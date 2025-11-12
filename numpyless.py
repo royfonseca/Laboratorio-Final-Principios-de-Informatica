@@ -32,10 +32,10 @@ Matriz = list[list[float]]
 def zeros(shape: tuple[int, int]) -> Matriz:
     filas, columnas = shape
     matriz = []
-    for fila in filas:
+    for fila in range(filas):
         mini_matriz = []
-        for columna in columnas:
-            mini_matriz[columna]= 0.0
+        for columna in range(columnas):
+            mini_matriz.append(0.0)
         matriz.append(mini_matriz)
     return matriz
 
@@ -55,7 +55,6 @@ def zeros(shape: tuple[int, int]) -> Matriz:
 
     Pista: Usa listas por comprensión anidadas
     """
-    raise NotImplementedError("Función no implementada.")
 
 
 def ones(shape: tuple[int, int]) -> Matriz:
