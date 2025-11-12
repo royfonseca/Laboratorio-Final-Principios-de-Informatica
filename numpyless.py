@@ -145,6 +145,15 @@ def shape(A: Matriz) -> tuple[int, int]:
 
 
 def transpose(A: Matriz) -> Matriz:
+    filas = len (A)
+    columnas = len(A[0])
+    transpuesta = [[0 for _ in range(filas)]for _ in range(columnas)]
+
+    for fila in range(filas):
+       for columna in range(columnas):
+           transpuesta[columna][fila]=A[fila][columna]
+           
+    return transpuesta
     """Devuelve la transpuesta de una matriz A.
 
     La transpuesta intercambia filas por columnas: A_t[j][i] = A[i][j].
