@@ -58,6 +58,15 @@ def zeros(shape: tuple[int, int]) -> Matriz:
 
 
 def ones(shape: tuple[int, int]) -> Matriz:
+    filas, columnas = shape
+    matriz = []
+    for fila in range(filas):
+        mini_matriz = []
+        for columna in range(columnas):
+            mini_matriz.append(1.0)
+        matriz.append(mini_matriz)
+    return matriz
+
     """Crea una matriz rellena de unos.
 
     Equivalente en NumPy: np.ones(shape)
@@ -74,10 +83,19 @@ def ones(shape: tuple[int, int]) -> Matriz:
 
     Pista: Similar a zeros() pero con 1.0
     """
-    raise NotImplementedError("Función no implementada.")
 
 
 def identity(n: int) -> Matriz:
+    matriz = []
+    for fila in range(n):
+        mini_matriz = []
+        for columna in range (n):
+            if columna == fila:
+                mini_matriz.append(1.0)
+            else:
+                mini_matriz.append(0.0)
+        matriz.append(mini_matriz)
+    return matriz
     """Crea una matriz identidad cuadrada.
 
     Equivalente en NumPy: np.identity(n)
@@ -96,7 +114,6 @@ def identity(n: int) -> Matriz:
 
     Pista: La diagonal tiene 1.0 cuando fila == columna
     """
-    raise NotImplementedError("Función no implementada.")
 
 
 # -------------------------------------------------------------------
