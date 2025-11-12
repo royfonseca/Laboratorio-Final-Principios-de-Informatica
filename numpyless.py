@@ -30,6 +30,15 @@ Matriz = list[list[float]]
 
 
 def zeros(shape: tuple[int, int]) -> Matriz:
+    filas, columnas = shape
+    matriz = []
+    for fila in filas:
+        mini_matriz = []
+        for columna in columnas:
+            mini_matriz.append(0.0)
+        matriz.append(mini_matriz)
+    return matriz
+
     """Crea una matriz rellena de ceros.
 
     Equivalente en NumPy: np.zeros(shape)
