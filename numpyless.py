@@ -35,7 +35,7 @@ def zeros(shape: tuple[int, int]) -> Matriz:
     for fila in filas:
         mini_matriz = []
         for columna in columnas:
-            mini_matriz.append(0.0)
+            mini_matriz[columna]= 0.0
         matriz.append(mini_matriz)
     return matriz
 
