@@ -12,8 +12,8 @@ tipo NumPy usando solo Python puro. ¡Perfecta para entender qué pasa
 Uso Recomendado:
     import numpyless as npl
 
-    # O para máxima ironía:
-    import numpyless as np  # ¡Cuidado con esto! 😈
+    # O para máxima ironía: 
+    import numpyless as np  # ¡Cuidado con esto
 
 Tipos de Datos:
 - Vector: list[float] - Un array 1D de flotantes
@@ -89,7 +89,7 @@ def identity(n: int) -> Matriz:
     matriz = []
     for fila in range(n):
         mini_matriz = []
-        for columna in range (n):
+        for columna in range(n):
             if columna == fila:
                 mini_matriz.append(1.0)
             else:
@@ -124,7 +124,7 @@ def identity(n: int) -> Matriz:
 def shape(A: Matriz) -> tuple[int, int]:
     filas = len(A)
     columnas = len(A[0])
-    return filas,columnas
+    return filas, columnas
     """Devuelve las dimensiones de una matriz como (filas, columnas).
 
     Equivalente en NumPy: A.shape
@@ -145,14 +145,14 @@ def shape(A: Matriz) -> tuple[int, int]:
 
 
 def transpose(A: Matriz) -> Matriz:
-    filas = len (A)
+    filas = len(A)
     columnas = len(A[0])
-    transpuesta = [[0 for _ in range(filas)]for _ in range(columnas)]
+    transpuesta = [[0 for _ in range(filas)] for _ in range(columnas)]
 
     for fila in range(filas):
-       for columna in range(columnas):
-           transpuesta[columna][fila]=A[fila][columna]
-           
+        for columna in range(columnas):
+            transpuesta[columna][fila] = A[fila][columna]
+
     return transpuesta
     """Devuelve la transpuesta de una matriz A.
 
