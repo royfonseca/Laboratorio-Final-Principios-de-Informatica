@@ -13,7 +13,7 @@ Uso Recomendado:
     import numpyless as npl
 
     # O para máxima ironía: 
-    import numpyless as np  # ¡Cuidado con esto
+    import numpyless as np  # ¡Cuidado con es
 
 Tipos de Datos:
 - Vector: list[float] - Un array 1D de flotantes
